@@ -1,0 +1,10 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod
+
+
+
+# https://adityatelange.github.io/hugo-PaperMod/
+# https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite
+# https://docs.microsoft.com/en-us/azure/static-web-apps/publish-hugo
