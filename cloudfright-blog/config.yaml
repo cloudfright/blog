@@ -1,9 +1,44 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: Blog
 theme: PaperMod
 
 
+menu: 
+  main:
+    - name: About Me
+      url: /about/whoami/
+      weight: 1
+    - name: Archive
+      url: archives/
+      weight: 5
+    - name: Tags
+      url: tags
+      weight: 10
+    - name: Categories
+      url: categories
+      weight: 10
+  
+      
+params:
+  env: production
+
+  homeInfoParams:
+        Title: "Cloudfright"
+        Content: >      
+          Posts on software engineering,  learning, psychology, music production, maths and science. 
+          If you'd like to get in touch, DM on me Twitter. Please be kind. I like kind people. 
+
+
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/cloudfright"
+    - name: twitter
+      url: "https://twitter.com/cloudfright"
+    - name: linkedin
+      url: https://www.linkedin.com/in/ben-dyer-5aa7414/
+  
 
 # https://adityatelange.github.io/hugo-PaperMod/
 # https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite
