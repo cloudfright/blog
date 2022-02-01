@@ -1,0 +1,37 @@
+name: Blog Build and Deploy
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Hugo update theme
+        run: git submodule update --init --recursive
+
+      - name: Hugo setup 
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.92.0"
+
+      - name: Hugo build
+        run: hugo --minify
+
+      - name: Deploy to SWA
+        id: deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} 
+          action: "upload"
+          app_location: "/cloudfright-blog/public" # App source code path
+          
