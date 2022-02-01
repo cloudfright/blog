@@ -24,7 +24,7 @@ jobs:
           hugo-version: "0.92.0"
 
       - name: Hugo build
-        run: hugo --minify
+        run: hugo --source "./cloudfright-blog" --minify
 
       - name: Deploy to SWA
         id: deploy
