@@ -60,7 +60,7 @@ params:
   
   analytics:
       google:
-      SiteVerificationTag: "UA-65290098-1"
+          SiteVerificationTag: "UA-65290098-1"
 
 
 # https://adityatelange.github.io/hugo-PaperMod/
