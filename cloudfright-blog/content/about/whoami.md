@@ -4,11 +4,11 @@ date: 2022-01-29T20:43:29Z
 draft: false
 ---
 
-!["profile picture"](/profile-pic2-circle.jpg)
+!["profile picture"](/common/profile-pic2-circle.jpg)
 
 Hello there. My name is Ben, I live in the South East of the UK. I lead software engineering teams for a living. 
 
-I explore my curiosity and write about my journey. I've met many experts and I don't claim to be one myself. I'll be your guide, not your guru.
+I explore my curiosity and write about my journey. I'll be your guide, not your guru.
 
 If you'd like to get in touch, DM on me [Twitter](https://twitter.com/cloudfright). Please be kind. I like kind people. 
 
