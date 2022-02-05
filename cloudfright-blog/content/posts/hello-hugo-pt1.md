@@ -2,16 +2,19 @@
 title: "Hello Hugo - part 1"
 date: 2022-02-03T20:19:42Z
 draft: true
-cover: 
+tags: []
+params:
+    ShowShareButtons: true
+    ShowReadingTime: true
 
 ---
 
 ![hugo logo](/hugo-how-to/hugo-logo.png)
-What better way to start a blog than to talk about how I built it with the help of some great open source software! I won't be going into every detail - this is more of a "here's how I did" it post.
+What better way to start a blog than to talk about how I built it with the help of some great open source software! 
 
-There are many popular blogging platforms out there such as [Wordpress](https://wordpress.com/create/), [Ghost](https://ghost.org/), or [Medium](https://medium.com/). All really easy to use, but I thought it would be fun to create one that was based on a static site generator called [Hugo](https://gohugo.io/). Static sites are great for blogs because although the content is relatively basic, you can still get a lot of functionly e.g. searching, without resorting to a database to store the site content. So in terms of hosting, it's as simple as it gets.
+There are many popular blogging platforms out there such as [Wordpress](https://wordpress.com/create/), [Ghost](https://ghost.org/), or [Medium](https://medium.com/). They are all really easy to use, but I thought it would be fun to create a blog that was based on a static site generator called [Hugo](https://gohugo.io/). Static sites are great for blogs because although the content is relatively basic, you still get a lot of functionality e.g. searching posts, without needing a database to store the site content. So in terms of hosting, it's as simple as it gets.
 
-With Hugo, blog posts are created in Markdown and then converted into static HTML, CSS and JavaScript during a build process. The Markdown files are stored in source code repository such as [GitHub](https://github.com/) and when Markdown files are committed and pushed to the repository, an automated process such as [GitHub Actions](https://github.com/features/actions) can automatically create the static content and deploy to your hosting platform of choice.
+With Hugo, blog posts are created in Markdown and then converted into static HTML, CSS and JavaScript during a build process. The Markdown files are stored in source code repository such as [GitHub](https://github.com/) and when the Markdown files are committed and pushed to the repository, an automated process such as [GitHub Actions](https://github.com/features/actions) creates the static content and deployd to your hosting platform of choice. 
 
 
 So let's get started! 
@@ -29,9 +32,9 @@ brew install hugo
 Next, you can create a new Hugo site with 
 
 ```
-hugo new site [path] [flags]
+hugo new site posts/mymarkdownfile.md
 ```
-This command builds the Hugo folder structure and adds the templates and supporting files you'll need to build a static site. 
+This command builds the Hugo folder structure and adds the templates and supporting files you'll need to build a static site. The ```hugo new``` command takes various [flags](https://gohugo.io/commands/hugo_new/).
 
 Now we have Hugo installed and new site created, we need to choose a Hugo theme. There's a gallery and some example sites [here](https://themes.gohugo.io/).
 
@@ -53,9 +56,9 @@ The advantage of using git submodules is that you can easily keep the theme up t
 
 ## Configuration
 
-Hugo is driven by configuration a [configuration file](https://www.engino.co.uk/content-text/configuration/) in yaml, toml, or JSON format. The configuration file, config.yaml defines gloabl site properites along with menu structure and taxonomies. There's a lot you can do with the configuration, so I'll just cover the basics. 
+Hugo is driven by a [configuration file](https://www.engino.co.uk/content-text/configuration/) which can be in yaml, toml, or JSON format. The configuration file defines global site properties along with menu structure and taxonomies. 
 
-For my site, I wanted to start with a basic [menu structure](https://gohugo.io/content-management/menus/) so I choose this 
+For my site, I wanted to start with a basic [menu structure](https://gohugo.io/content-management/menus/)
 
 ```yaml
 menu: 
