@@ -1,8 +1,10 @@
 baseURL: https://blog.cloudfright.com
 languageCode: en-us
-title: Blog
+title: Cloudfright
 theme: PaperMod
 
+enableRobotsTXT: true
+googleAnalytics: UA-65290098-1
 
 menu: 
   main:
@@ -12,24 +14,41 @@ menu:
     - name: Archive
       url: archives/
       weight: 5
+    - name: Search
+      url: search/
+      weight: 10
     - name: Tags
       url: tags
-      weight: 10
+      weight: 15
     - name: Categories
       url: categories
-      weight: 15
+      weight: 20
   
-      
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
 params:
   env: production
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
 
   homeInfoParams:
-        Title: "Cloudfright"
+        Title: "Blog"
         Content: >      
           Posts on software engineering,  learning, psychology, music production, maths and science. 
           If you'd like to get in touch, DM on me Twitter. Please be kind. I like kind people. 
-
-
 
   socialIcons:
     - name: github
@@ -39,6 +58,10 @@ params:
     - name: linkedin
       url: https://www.linkedin.com/in/ben-dyer-5aa7414/
   
+  analytics:
+      google:
+      SiteVerificationTag: "UA-65290098-1"
+
 
 # https://adityatelange.github.io/hugo-PaperMod/
 # https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite

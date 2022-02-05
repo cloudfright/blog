@@ -2,7 +2,7 @@
 title: "Hello Hugo - part 1"
 date: 2022-02-03T20:19:42Z
 draft: true
-tags: []
+tags: [hugo, static]
 params:
     ShowShareButtons: true
     ShowReadingTime: true
