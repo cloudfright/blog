@@ -2,8 +2,8 @@
 title: "Hello Hugo - part 1"
 date: 2022-02-03T20:19:42Z
 draft: false
-weight: 1
-summary: "What better way to start a blog than to talk about how I built it with the help of some great open source software! "
+
+summary: "What better way to start a blog than to talk about how I built it with the help of some great open source software!"
 cover: 
     image: /hugo-how-to/hugo-logo.png
     alt: "hugo logo"
@@ -35,10 +35,10 @@ To install Hugo, it's as simple as
 brew install hugo
 ```
 
-Next, you can create a new Hugo site with 
+Next, you can create a new Hugo site with: 
 
 ```
-hugo new site posts/mymarkdownfile.md
+hugo new site <name of site> -f yml
 ```
 
 This command builds the Hugo folder structure and adds the templates and supporting files you'll need to build a static site. The ```hugo new``` command takes various [flags](https://gohugo.io/commands/hugo_new/).
@@ -96,9 +96,40 @@ menu:
 ```
 
 The weight provides the ordering from left to right.
-The **Tags**, **Categories** and **Series** taxonomies are baked in and work out of the box. To get the search functionality working, we just need to make a few small [modifications](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page).
+The **Tags**, **Categories** and **Series** taxonomies are baked in and work out of the box.
+ To get the search functionality working, we just need to make a few small modifications.
 
-To enable archives, follow [these](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#archives-layout) instructions. 
+ Add this to ```config.yml```
+ ```
+ outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+ ```
+Create search.md in the content folder with the front matter:
+
+```
+---
+title: "Search" # in any language you want
+layout: "search" # is necessary
+# url: "/archive"
+# description: "Description for Search"
+summary: "search"
+---
+```
+
+To enable archives, create archives.md in the content folder and add this front matter:
+
+```
+---
+title: "Archive"
+layout: "archives"
+url: "/archives/"
+summary: archives
+---
+```
 
 ## Writing a post
 
