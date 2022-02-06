@@ -2,6 +2,7 @@
 title: "Hello Hugo - part 1"
 date: 2022-02-03T20:19:42Z
 draft: false
+weight: 1
 summary: "What better way to start a blog than to talk about how I built it with the help of some great open source software! "
 cover: 
     image: /hugo-how-to/hugo-logo.png
