@@ -98,6 +98,8 @@ menu:
 The weight provides the ordering from left to right.
 The **Tags**, **Categories** and **Series** taxonomies are baked in and work out of the box. To get the search functionality working, we just need to make a few small [modifications](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page).
 
+To enable archives, follow [these](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#archives-layout) instructions. 
+
 ## Writing a post
 
 Now with our menu defined, let's create a first post using:
