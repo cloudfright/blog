@@ -8,21 +8,24 @@ enableEmoji: true
 
 menu: 
   main:
-    - name: About Me
-      url: /about/whoami/
+    - name: Search
+      url: /search/
       weight: 1
+    - name: Categories
+      url: /categories/
+      weight: 5
+    - name: Tags
+      url: /tags/
+      weight: 10
+    - name: Series
+      url: /series/
+      weight: 15
     - name: Archive
       url: archives/
-      weight: 5
-    - name: Search
-      url: search/
-      weight: 10
-    - name: Tags
-      url: tags
-      weight: 15
-    - name: Categories
-      url: categories
       weight: 20
+    - name: About Me
+      url: /about/whoami/
+      weight: 25
   
 outputs:
     home:

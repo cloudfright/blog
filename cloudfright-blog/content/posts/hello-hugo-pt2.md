@@ -2,9 +2,20 @@
 title: "Hello Hugo - part 2"
 date: 2022-02-05T15:36:30Z
 draft: true
+
+summary: "So now we have a Hugo blog running locally, how do we make it visible to others? In this post I'll show you how I hosted the blog and how I update it when new Markdown files are pushed to the repository."
+
+categories: ["coding"]
+tags: ["hugo"]
+series: ["Building a Hugo blog"]
+
+params:
+    ShowShareButtons: true
+    ShowReadingTime: true
+
 ---
 
-So now we have a Hugo blog running locally, how do we make it visible to others? In this post I'll show you how I hosted the blog and update it when new Markdown files are pushed to the repository.
+
 
 I was looking for a way to host the site for free and so I chose to adopt [Azure Static Web Apps](https://azure.microsoft.com/en-gb/services/app-service/static/#overview). Not only is there a free tier, but you get up to 2 custom domains and a free TLS certificate. Static Web Apps can also host Functions as well as the static content. It's free to [sign up](https://azure.microsoft.com/en-gb/free/) to Microsoft Azure and you also get USD200 credits in the first month. 
 

@@ -2,26 +2,34 @@
 title: "Hello Hugo - part 1"
 date: 2022-02-03T20:19:42Z
 draft: true
-tags: [hugo, static]
+summary: "What better way to start a blog than to talk about how I built it with the help of some great open source software! "
+cover: 
+    image: /hugo-how-to/hugo-logo.png
+    alt: "hugo logo"
+
+categories: ["coding"]
+tags: ["hugo"]
+series: ["Building a Hugo blog"]
+
 params:
     ShowShareButtons: true
     ShowReadingTime: true
 
 ---
 
-![hugo logo](/hugo-how-to/hugo-logo.png)
-What better way to start a blog than to talk about how I built it with the help of some great open source software! 
 
-There are many popular blogging platforms out there such as [Wordpress](https://wordpress.com/create/), [Ghost](https://ghost.org/), or [Medium](https://medium.com/). They are all really easy to use, but I thought it would be fun to create a blog that was based on a static site generator called [Hugo](https://gohugo.io/). Static sites are great for blogs because although the content is relatively basic, you still get a lot of functionality e.g. searching posts, without needing a database to store the site content. So in terms of hosting, it's as simple as it gets.
 
-With Hugo, blog posts are created in Markdown and then converted into static HTML, CSS and JavaScript during a build process. The Markdown files are stored in source code repository such as [GitHub](https://github.com/) and when the Markdown files are committed and pushed to the repository, an automated process such as [GitHub Actions](https://github.com/features/actions) creates the static content and deployd to your hosting platform of choice. 
+
+There are many popular blogging platforms out there such as [Wordpress](https://wordpress.com/create/), [Ghost](https://ghost.org/), or [Medium](https://medium.com/). They are all really easy to use and don't require any technical knowledge, but I thought it would be fun to create a blog that was based on a static site generator called [Hugo](https://gohugo.io/). Static sites are great for blogs because although the content is relatively basic, you still get a lot of functionality without needing a database to store the site content. They are also lightening fast. And in terms of hosting, it's as simple as it gets. 
+
+Using Hugo, blog posts are created in [Markdown](https://www.markdownguide.org/) and then converted into static HTML, CSS and JavaScript during a build process. The Markdown files are stored in source code repository such as [GitHub](https://github.com/) and when the Markdown files are committed and pushed to the repository, an automated process such as [GitHub Actions](https://github.com/features/actions) can build the static content and deploy to your hosting platform of choice. 
 
 
 So let's get started! 
 
 ## Installing Hugo
 
- First we need to to install Hugo, and there's a great getting started guide [here](https://gohugo.io/getting-started/quick-start/). I built this on MacOS and I previously had installed [Homebrew](https://docs.brew.sh/Installation) and had also used that to install [Git](https://git-scm.com/download/mac). I'm using [VSCode](https://code.visualstudio.com/) as my Markdown editor.
+ First we need to to install Hugo, and there's a great getting started guide [here](https://gohugo.io/getting-started/quick-start/). I built this on MacOS and had previously installed a package manager called [Homebrew](https://docs.brew.sh/Installation). I also had also used that to install a source control application called [Git](https://git-scm.com/download/mac). I'm using [VSCode](https://code.visualstudio.com/) as my Markdown editor.
 
 To install Hugo, it's as simple as 
 
@@ -36,7 +44,7 @@ hugo new site posts/mymarkdownfile.md
 ```
 This command builds the Hugo folder structure and adds the templates and supporting files you'll need to build a static site. The ```hugo new``` command takes various [flags](https://gohugo.io/commands/hugo_new/).
 
-Now we have Hugo installed and new site created, we need to choose a Hugo theme. There's a gallery and some example sites [here](https://themes.gohugo.io/).
+Now we have Hugo installed and a new site created, we need to choose a Hugo theme. There's a gallery and some example sites [here](https://themes.gohugo.io/).
 
 I was looking for something visually minimal and so themes I liked were 
 - [Github Style](https://themes.gohugo.io/themes/github-style/)
@@ -56,40 +64,101 @@ The advantage of using git submodules is that you can easily keep the theme up t
 
 ## Configuration
 
-Hugo is driven by a [configuration file](https://www.engino.co.uk/content-text/configuration/) which can be in yaml, toml, or JSON format. The configuration file defines global site properties along with menu structure and taxonomies. 
+Hugo is driven by a [configuration file](https://www.engino.co.uk/content-text/configuration/) which can be in yaml, toml, or JSON format. The configuration file defines global site properties along with menu structures and taxonomies. 
 
-For my site, I wanted to start with a basic [menu structure](https://gohugo.io/content-management/menus/)
+The [menu structure](https://gohugo.io/content-management/menus/) for the site is defined within the config file. For the blog, I wanted to something like this.
+
+![menu structure](/hugo-how-to/blog-menu.jpg)
+
+And the yaml config is
 
 ```yaml
 menu: 
   main:
-    - name: About Me
-      url: /about/whoami/
+    - name: Search
+      url: /search/
       weight: 1
-    - name: Archive
-      url: archives/
+    - name: Categories
+      url: /categories/
       weight: 5
     - name: Tags
-      url: tags
+      url: /tags/
       weight: 10
-    - name: Categories
-      url: categories
+    - name: Series
+      url: /series/
       weight: 15
+    - name: Archive
+      url: archives/
+      weight: 20
+    - name: About Me
+      url: /about/whoami/
+      weight: 25
   
 ```
 
-To create a new post use 
+The weight provides the ordering, left to right.
+The Tags, Categories and Series taxonomies are baked and work out of the box. To the search working, we just need to make a few small [modifications](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page).
+
+## Writing a post
+
+Now with our menu defined, let's create a first post using 
 
 ```
-hugo new posts/newpost.md
+hugo new posts/hello-hugo-pt1.md
 ```
 
-Where newpost.md is the filename for your post.
+Each post has a [front matter](https://gohugo.io/content-management/front-matter/) - a collection of configuration variables and metadata. 
+
+When a new post is created, the front matter is initialised from a template in /archetypes/default.md which looks like this. 
+
+```
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+---
+
+```
+
+You can customise this file to include other metadata you wish to initialise by default.
+
+I've added some additional variables to this page.
+
+```
+---
+title: "Hello Hugo - part 1"
+date: 2022-02-03T20:19:42Z
+draft: true
+summary: "What better way to start a blog than to talk about how I built it with the help of some great open source software! "
+cover: 
+    image: /hugo-how-to/hugo-logo.png
+    alt: "hugo logo"
+
+categories: ["coding"]
+tags: ["hugo"]
+series: ["Building a Hugo blog"]
+
+params:
+    ShowShareButtons: true
+    ShowReadingTime: true
+
+---
+```
+You can find the variables specific to PaperMod [here](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/).
+
+
 To check changes locally as you edit your Markdown use Hugo's live server. 
 
 ```
 hugo server -D
 ```
-This will start up a local server that you can visit in your browser at http://localhost:1313/ with the -D option allowing you to see [draft](https://gohugo.io/getting-started/usage/) posts.
+This will start up a local server that you can visit in your browser at ```http://localhost:1313/``` The the -D option allows you to see [draft](https://gohugo.io/getting-started/usage/) posts.
 
-In part 2, we'll explore how we can host the blog content so that it's publicly accesssible.
+## Summary
+
+
+That's all for part 1. We've installed hugo, added some basic configuration, created a first post and seen how we can use ```hugo server``` to build and preview the site locally.
+
+You can find the github repository for the this blog [here](https://github.com/cloudfright/blog).
+
+In part 2, we'll explore some hosting options to make the blog content publicly accessible.
