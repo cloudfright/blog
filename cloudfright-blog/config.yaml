@@ -31,7 +31,7 @@ outputs:
     home:
         - HTML
         - RSS
-        - JSON # is necessary
+        - JSON 
 
 taxonomies:
     category: categories
@@ -50,7 +50,7 @@ params:
   homeInfoParams:
         Title: "Blog"
         Content: >      
-          Posts on software engineering,  learning, psychology, music production, maths and science. 
+          Posts on software engineering,  learning, behavioural science, music production, maths and science. 
           If you'd like to get in touch, DM on me Twitter. Please be kind. I like kind people. 
 
   socialIcons:
@@ -62,12 +62,3 @@ params:
       url: https://www.linkedin.com/in/ben-dyer-5aa7414/
   
 
-# https://adityatelange.github.io/hugo-PaperMod/
-# https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite
-# https://docs.microsoft.com/en-us/azure/static-web-apps/publish-hugo
-# https://ruddra.com/hugo-deploy-static-page-using-github-actions/
-
-# https://blog.auryn.dev/posts/add-cookies-to-hugo-site/
-# https://docs.microsoft.com/en-us/answers/questions/525937/azure-application-insights-for-static-web-page.html
-# https://stackoverflow.com/questions/68146449/deeper-analytics-for-azure-static-web-apps
-# https://medium.com/@beyerleinf/azure-application-insights-how-not-to-burn-money-using-it-5f1bbe5816b4

@@ -194,6 +194,6 @@ Every time you save your Markdown files, the preview will automatically refresh.
 
 That's all for part 1. We've installed hugo, added some basic configuration, created a first post and seen how we can use ```hugo server``` to build and preview the site locally.
 
-You can find the github repository for the this blog [here](https://github.com/cloudfright/blog).
+You can find the github repository for this blog [here](https://github.com/cloudfright/blog).
 
 In part 2, we'll explore some hosting options to make the blog content publicly accessible.

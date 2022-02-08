@@ -1,12 +1,12 @@
 ---
 title: "Hello Hugo - part 2"
 date: 2022-02-05T15:36:30Z
-draft: true
+draft: false
 
 summary: "So now we have a Hugo blog running locally, how do we make it visible to others? In this post I'll show you how I hosted the blog and how I update it when new Markdown files are pushed to the repository."
 
 cover: 
-    image: /hugo-how-to/azure-logo.png
+    image: /hugo-how-to/azure-logo2.png
     alt: "microsoft azure logo"
 
 categories: ["coding"]
@@ -54,7 +54,7 @@ Next we'll create a repository secret in the GitHub project by navigating the re
 
 We need one last piece of configuration before we look at GitHub Actions to build and deploy the Hugo site.
 
-We need to create a GitHub [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+We need to create a GitHub [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) so the GitHub Action can access the repository.
 
 Head over to your GitHub profile -> Settings -> Developer Settings and selecting Personal Access Tokens. Create a token by selecting the repo, workflow and write packages permission boxes.
 
@@ -121,5 +121,7 @@ Then go to your domain management provider (I use [dnsimple](https://dnsimple.co
 ## Summary
 
 In this post, we created an Azure Static Web App in the Azure portal and configured a GitHub Action to build and deploy the Hugo site.
+
+You can find the github repository for this blog [here](https://github.com/cloudfright/blog).
 
 In part 3, I'll look at options for gathering some web analytics and explore more of the Hugo configuration options.  
