@@ -186,7 +186,7 @@ To check changes locally as you edit your Markdown, use Hugo's  server:
 ```
 hugo server -D
 ```
-This will start up a local server. Just open ```http://localhost:1313/``` in your browser. The the -D option allows you to see [draft](https://gohugo.io/getting-started/usage/) posts.
+This will start up a local server. Just open ```http://localhost:1313/``` in your browser. The -D option allows you to see [draft](https://gohugo.io/getting-started/usage/) posts.
 
 Every time you save your Markdown files, the preview will automatically refresh. 
 
