@@ -5,7 +5,6 @@ theme: PaperMod
 
 enableRobotsTXT: true
 enableEmoji: true
-googleAnalytics: UA-65290098-1
 
 menu: 
   main:
@@ -27,6 +26,9 @@ menu:
     - name: About Me
       url: /about/whoami/
       weight: 25
+    - name: Privacy
+      url: /privacy/
+      weight: 30
   
 outputs:
     home:
@@ -61,7 +63,3 @@ params:
       url: "https://twitter.com/cloudfright"
     - name: linkedin
       url: https://www.linkedin.com/in/ben-dyer-5aa7414/
-  
-  analytics:
-      google:
-        SiteVerificationTag: "UA-65290098-1"

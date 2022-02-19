@@ -15,6 +15,9 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
+      - name: Insert App Insights  instrument key
+        run: find . -name 'extend_head.html' -exec sed -i ''s/#{APP_INSIGHTS_KEY_PLACEHOLDER}#/${{ secrets.APP_INSIGHTS_KEY }}/g'' {} \;
+   
       - name: Hugo update theme
         run: git submodule update --init --recursive
 
