@@ -196,4 +196,4 @@ That's all for part 1. We've installed hugo, added some basic configuration, cre
 
 You can find the github repository for this blog [here](https://github.com/cloudfright/blog).
 
-In part 2, we'll explore some hosting options to make the blog content publicly accessible.
+In [part 2](/posts/hello-hugo-pt2/), we'll explore some hosting options to make the blog content publicly accessible.

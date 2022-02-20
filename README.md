@@ -9,4 +9,4 @@ git submodule update --init --recursive
 ```
 
 
-For all other Hugo commands, execute from withib the cloudright-blog folder.
+For all other Hugo commands, execute from within the cloudright-blog folder.
