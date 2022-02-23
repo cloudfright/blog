@@ -18,7 +18,7 @@ params:
     ShowReadingTime: true
 ---
 
-In [part 2](posts/hello-hugo-pt2/) we hosted the blog in a Azure Static Web app and used a GitHub action to automatically build and deploy the Hugo site when new markdown files are committed. 
+In [part 2](/posts/hello-hugo-pt2/) we hosted the blog in a Azure Static Web app and used a GitHub action to automatically build and deploy the Hugo site when new markdown files are committed. 
 
 In this post we look at how to add usage analytics to our blog. Analytics are useful to know if the site is working, the number of visitors and the number of page views. In the age of tracking protection, this has its challenges. There are several good analytics options available. Let’s take a look at some options. 
 
