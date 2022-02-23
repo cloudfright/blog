@@ -24,10 +24,10 @@ In this post we look at how to add usage analytics to our blog. Analytics are us
 
 
 ### [Google Analytics](https://analytics.withgoogle.com/)
--	The titan of analytics 
--	Just two lines need in config
--	Offers are free product as well as paid
--	Gathers data that can be used to identify an induvial 
+-	The stalwart of analytics 
+-	Just two lines need in Hugo config
+-	Offers free product as well as paid
+-	Gathers detailed user information and behaviour
 
 ### [Fathom](https://usefathom.com/)
 -	Privacy focused 
@@ -59,17 +59,17 @@ In this post we look at how to add usage analytics to our blog. Analytics are us
 
 ## Let’s talk privacy 
 
-There’s a growing awareness of privacy. Users are getting wise to trackers, creepily targeted ads, and the increasing accuracy of user profiling - especially from the tech titans such as Google, Meta, and other social media platforms. As the saying goes: if the platform is free to use, then you’re the product. Not only do we have a responsibility for our own privacy, but if we build a service, even a blog, we also have a responsibility to our visitors. DuckDuck Go have some great privacy research and privacy focused products. It’s time to take responsibility with the data we gather and use. The [Spread Privacy](https://spreadprivacy.com/tag/research/) initiative, authored by DuckDuck go, has some useful reference material. 
+There’s a growing awareness of privacy. Users are getting wise to trackers, creepily targeted ads, and the increasing accuracy of user profiling - especially from the tech titans such as Google, Meta, and other social media platforms. As the saying goes: *if the platform is free to use, then you are the product*. Not only do we have a responsibility for our own privacy, but if we build a service, even a blog, we also have a responsibility to our visitors. It’s time to take responsibility with the data we gather and use. The [Spread Privacy](https://spreadprivacy.com/tag/research/) initiative, authored by DuckDuck go, is a great place to get an education. 
 
 
 ## Choices, choices
 
-There’s no denying that the simplest thing to do would be to use the free tier of Google Analytics – it’s a two-line change in Hugo’s ```config.yml``` to add the tracking ID. But as a privacy advocate, I want to do better. Fathom and Plausible offer privacy-focused services, and while not too expensive, it’s a little more than I want to commit to at this stage. If the blog grows and I want to get a little more detail that will help me fine tune my SEO, then I will make the financial equipment. But given this is early days for the blog, and it’s a service I’ve used before through work, I will start off with Azure Application Insights and see where that takes me. App Insights has the most basic features I need; user counts and page views and is ticks enough of the privacy boxes. Right now, I’m more interested to know if the blog is working than how to drive more traffic to it. I need to keep an eye on the volume of traffic because App Insights can become a little expensive if the traffic grows suddenly. There are ingestion caps, alerts and other spending controls.
+There’s no denying that the simplest thing to do would be to use the free tier of Google Analytics – it’s a two-line change in Hugo’s ```config.yml``` to add the tracking ID, but as a privacy advocate, I want to do better. Fathom and Plausible offer privacy-focused services, and while not too expensive, it’s a little more than I want to commit to at this stage. If the blog grows and I want to get a little more detail that will help me fine tune my SEO, then I will make the financial commitment. But given this is early days for the blog, and it’s a service I’ve used before in my day job, I will start off with Azure Application Insights and see where that takes me. App Insights has the most basic features I need; user counts, page views and is ticks enough of the privacy boxes. Right now, I’m more interested to know if the blog is working than how to drive more traffic to it. I need to keep an eye on the volume of traffic because App Insights can become a little expensive if the traffic grows suddenly. There are ingestion caps, alerts and other spending controls.
 https://docs.microsoft.com/en-us/azure/azure-monitor/app/pricing#managing-your-data-volume
 
 
 ## Hooking into Hugo
-Now the analytics tool has been chosen, how do we hook it up to Hugo? The PaperMod theme has [hooks for customisation](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#custom-head--footer) of header, footer and CSS.
+Now the analytics tool has been chosen, how do we hook it up to Hugo? The PaperMod theme has [hooks for customisation](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#custom-head--footer) for header, footer and CSS.
 
 We’re going to want to add in some custom code to initialise App Insights and that’s going to need to live in the header.
 
@@ -85,16 +85,16 @@ We’re going to want to add in some custom code to initialise App Insights and 
     │   └── extend_head.html   
     └── robots.txt
 ```
-We create a file called ```extend_head-html``` in the site root under the ```layouts/partials``` file path. This HTML file will get bumdled as part of the head and can include HTML, JavaScript, or CSS.
+If we create a file called ```extend_head-html``` in the site root under the ```layouts/partials``` file path. this HTML file will get bumdled as part of the head and can include HTML, JavaScript, or CSS.
 
 But before we go ahead and initialise App Insights, there’s some privacy laws to attend to. The General Data Protection Regulation (GDPR) stipulates that we need to ask for [user consent](https://gdpr.eu/cookies/) before cookies can be leveraged to analyse user behaviour. 
 
-We’re all familiar with cookie banners we see everyday, and that’s what we need to build to comply with the regulation. *LittleBigTech* has an excellent [blog article](https://littlebigtech.net/posts/hugo-gdpr-cookie-consent-banner/) on how to go about this. I’ll base the banner off his work, but with a few twists. I want to keep the PaperMod theme directory unmodified and easy to update via git submodules, so I’ll use the other hooks available for custom CSS.
+We’re all familiar with cookie banners we see everyday, and that’s what we need to build to comply with the regulation. *LittleBigTech* has an excellent [blog article](https://littlebigtech.net/posts/hugo-gdpr-cookie-consent-banner/) on how to go about this. I’ll base the banner off his work, but with a few twists. I want to keep the PaperMod theme directory unmodified and easy to update via git submodules, so I’ll use the the PaperMod hooks mentioned above.
 
 
 Let’s start with the head modifications 
 
-Here’s what will go into extend_head.html
+Here’s what will go into ```extend_head.html```
 ```html
 <div id="cookie-notice">
     <span>We would like to use third party cookies and scripts to improve the
@@ -153,7 +153,7 @@ Here’s what will go into extend_head.html
 ```
 
 
-And for the custom CSS, we’ll create a file called ```cookie-banner.css``` in and put in /assets/css/extended path from our site root.
+And for the custom CSS, we’ll create a file called ```cookie-banner.css``` in the /assets/css/extended path from our site root.
 
 ```
 .(site root)
@@ -166,7 +166,7 @@ And for the custom CSS, we’ll create a file called ```cookie-banner.css``` in 
             ├── cookie-notice.css
             
 ```
-This CSS will style the cookie banner.
+This CSS will style the cookie banner:
 
 ```css
 #cookie-notice {
@@ -202,25 +202,22 @@ And here's the banner in action.
 
 ## Creating App Insights 
 
-Creating in the portal 
+An instance of App Instance can be created in the Azure portal using the *Create a resource* button and then searching for App Insights.
 
-## Can you keep a secret?
+Next we just need to complete *resource group*, *name*, and *region*
+![app insights create](/hugo-how-to/ai-create.jpg)
 
-App Insights requires an instrumentation key, a unique identifier for the App Insights instance and ideally we don't want to store that with the source code. Having access to the key doesn't mean an attacker could fetch data from the App Insights instance (there are Role Based Access Controls around that), but it does mean an attacker could send data to an App Insights instance as part of a denial of service attack. 
-
-We can use GitHub [repository secrets](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-encrypted-secrets-for-your-repository-and-organization-for-codespaces) to store the App Insights instrumentation key and then use that in the GitHub action to replace a placeholder in the extend_head.html file with the repository secret defined in the GitHub repository Settings/Secrets/Actions user interface. 
-
-To replace the App Insights token placeholder, we add this to the ```.github/workflows/blog-build-deploy.yml``` action.
-
-```yaml
- - name: Insert App Insights  instrument key
-        run: find . -name 'extend_head.html' -exec sed -i ''s/#{APP_INSIGHTS_KEY_PLACEHOLDER}#/${{ secrets.APP_INSIGHTS_KEY }}/g'' {} \;
-   
-```
 
 ## Configuring App Insights
 
-Assuming the cookie has been accepted, we can initialise App Insights like this.
+Now we have the App Insights instance created, we need to fetch the App Insights JavaScript library within ```extend_head.html``` :
+```
+<script src = "https://js.monitor.azure.com/scripts/b/ai.2.min.js"><script>  
+
+```
+If users have tracking protection enabled, this script  will be get blocked by some browsers (e.g. Brave).
+
+Assuming the cookie has been accepted, we can initialise App Insights like this:
 ```
   var snippet = {
             config: {
@@ -232,22 +229,37 @@ Assuming the cookie has been accepted, we can initialise App Insights like this.
         appInsights.trackPageView();
 ```
 
-(having loaded the App Insights library earlier on in ```extend_head.html```)
+AppInsights needs a 'secret' key as part of the configuration, and this is what we'll talk about next.
+
+## Can you keep a secret?
+
+App Insights requires an instrumentation key, a unique identifier for the App Insights instance. Ideally we don't want to embed that in the source code in a public repository! Having access to the key doesn't mean an attacker could fetch data from the App Insights instance (there are Role Based Access Controls around that), but it does mean an attacker could send data to an App Insights instance as part of a denial of service attack. A determined attacker will be able to find the key by using the browser inspection tools, but there are ways to protect against this which I'll talk about in future post. 
+
+You can find the key in the Azure portal in your App Insights instance:
+![app insights instrumentation key](/hugo-how-to/ai-key.jpg)
+
+We'll put a ```#{APP_INSIGHTS_KEY_PLACEHOLDER}#``` placeholder in the source code and then use a GitHub action to swap that with the real key held in the [repository secrets](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-encrypted-secrets-for-your-repository-and-organization-for-codespaces). You can get to the repository secret settings UI from the repository/Settings/Secrets/Actions menus.
+
+To replace the App Insights token placeholder, we add this to the ```.github/workflows/blog-build-deploy.yml``` action.
+
+```yaml
+ - name: Insert App Insights  instrument key
+        run: find . -name 'extend_head.html' -exec sed -i ''s/#{APP_INSIGHTS_KEY_PLACEHOLDER}#/${{ secrets.APP_INSIGHTS_KEY }}/g'' {} \;
+   
 ```
-<script src = "https://js.monitor.azure.com/scripts/b/ai.2.min.js"></script>  
 
-```
+The last thing we need to do is to define a Privacy page, where we can provide more detail and link to that from the cookie banner and the main menu. 
 
-The last thing we need to do is to define a Privacy page and link to that from the cookie banner and the main menu.
+Something like:
 
-```
+>"We collect usage data using Azure Application Insights for the purposes of visualising the traffic on this website. All data is anonymised and we do not sell or share any data with third parties. If you choose not to accept, no analytics data will be processed."
 
-```
-
-The complete contents of ```extend_head.html``` can be found [here](https://github.com/cloudfright/blog/blob/main/cloudfright-blog/layouts/partials/extend_head.html).
+The completed version of ```extend_head.html``` can be found [here](https://github.com/cloudfright/blog/blob/main/cloudfright-blog/layouts/partials/extend_head.html).
 
 ## Summary
 
-In this post we've explored the different analytics options available and implemented Azure Application Insights. As and when the blog, I'll revisit the analytics implementation. 
+In this post we've explored the different analytics options available and implemented Azure Application Insights. A future analytics enhancement would be to work around any browser tracking protection while still respecting visitors' choices around analytics tracking.
+
+In this 3-part series, we've created a Hugo blog in [part 1](/posts/hello-hugo-pt1/), set up the hosting and deployment in [part 2](/posts/hello-hugo-pt2/), and in part 3, enabled some basic analytics. 
 
 
