@@ -1,7 +1,7 @@
 ---
 title: "Hello Hugo Pt3"
 date: 2022-02-06T16:33:23Z
-draft: true
+draft: false
 
 summary: "Now we've hosted the blog using Azure Static Web Apps, it's time to build in some analytics so we can see who's visiting the site. In this I'll look at some analytics options and implement one of them."
 
