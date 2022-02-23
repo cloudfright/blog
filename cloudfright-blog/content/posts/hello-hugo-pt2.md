@@ -19,7 +19,7 @@ params:
 
 ---
 
-In [part 1](posts/hello-hugo-pt1/) we installed and configured Hugo to run on a local machine. Now we're going to publish the blog on the Internet. 
+In [part 1](/posts/hello-hugo-pt1/), we installed and configured Hugo to run on a local machine. Now we're going to publish the blog on the Internet. 
 
 There are [many ways](https://gohugo.io/hosting-and-deployment/) to host a Hugo site. From AWS, to GitHub, Netlify, GitLab, CDNs etc. I was looking for a way to host the site for free and so I chose to explore [Azure Static Web Apps](https://azure.microsoft.com/en-gb/services/app-service/static/#overview) in combination with GitHub and GitHub actions. Not only do Azure Static Web Apps offer a free tier, but you get up to 2 custom domains and a free TLS certificate. Static Web Apps can also host [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) as well as the static content. It's free to [sign up](https://azure.microsoft.com/en-gb/free/) to Microsoft Azure and you also get USD200 credits in the first month. 
 
