@@ -10,3 +10,4 @@ git submodule update --init --recursive
 
 
 For all other Hugo commands, execute from within the cloudright-blog folder.
+Hosted at [blog.cloudfright.com](https://blog.cloudfright.com)
