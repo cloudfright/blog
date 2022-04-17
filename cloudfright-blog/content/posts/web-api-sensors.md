@@ -1,14 +1,15 @@
 ---
-title: "Charting mobile sensor data with JavaScript"
+title: "Charting mobile motion sensor data with JavaScript"
 date: 2022-04-09T08:01:20+01:00
 draft: true
-summary: ""
+summary: "Have you ever wondered if you could read motion data from your phone and visualise it it in real time? If you have, then read on."
 cover: 
-    image: 
-    alt: ""
+    image: /web-api-sensors/sensor-chart-mini.jpeg
+    alt: "moblie motion sensor chart"
+
 
 categories: ["coding"]
-tags: []
+tags: ["sensors", "mobile", "javascript"]
 series: []
 
 params:
@@ -17,56 +18,53 @@ params:
 
 ---
 
-- Intro
 
-As part of the work I'm doing in the [Neosensory Community Research Program](/posts/neosensory-community.md/), I wanted to explore motion sensor data from a mobile device to attempt to detect balance and gait. I wanted to chart the data in realtime so I could visualise the data  There are two ways of getting the data: 
+
+As part of the work I'm doing in the [Neosensory Community Research Program](/posts/neosensory-community.md/), I wanted to explore motion sensor data from a mobile device and establish if it would be possible to detect balance and gait of the phone's user. I was interested in charting the data in real time so I could visualise the sensors as I moved the phone.  There were two approaches to getting motion data from a mobile device: 
 - Write a native app, ideally cross-platform, with something like [Flutter](https://flutter.dev/multi-platform/web)
-- Web-based application using JavaScript Web APIs
+- Write a web-based application using JavaScript Web APIs
 
 I chose the Web API approach for fast iteration and easy sharing with others in the team. [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) are built into modern browsers which we'll look at next.
 
 ## Web APIs
 
-So what can you get with the Web APIs? Quite a lot it turns out! There are many APIs to access a device's hardware interfaces and filesystem, helpers to load content, store data and most interestingly, access a device's sensors.
+So what can you do with the Web APIs? Quite a lot it turns out! There are APIs to access a device's hardware interfaces and filesystem, helpers to load content, store data and most interestingly, to access a device's sensors.
 
 A caveat: many of these API's are experimental and may have incomplete or differing implementations across browsers - so proceed with caution!
 
 For accessing a mobile device's sensors, we have two options:
 
-- [Sensor APIs](https://developer.mozilla.org/en-US/docs/Web/API/)Sensor_APIs
+- [Sensor APIs](https://developer.mozilla.org/en-US/docs/Web/API/)
 - [Device Motion Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
 
-- [W3C spec](https://w3c.github.io/deviceorientation/#devicemotion)
+These are defined in the [W3C spec](https://w3c.github.io/deviceorientation/#devicemotion)
 
 The Sensor APIs offer access to: 
-- AbsoluteOrientationSensor	
-- Accelerometer	
-- AmbientLightSensor	
-- GravitySensor	
-- Gyroscope	
-- LinearAccelerationSensor
-- Magnetometer
-- RelativeOrientationSensor
-
-[Browser compatibility](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility)
+> - AbsoluteOrientationSensor	
+> - Accelerometer	
+> - AmbientLightSensor	
+> - GravitySensor	
+> - Gyroscope	
+> - LinearAccelerationSensor
+> - Magnetometer
+> - RelativeOrientationSensor
 
 Device Motion Event offers:
-- Acceleration 
-- Acceleration including gravity (orientation)
-- Rotation rate
+> - Acceleration 
+> - Acceleration including gravity (orientation)
+> - Rotation rate
 
-[Browser compatibility](
-https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent#browser_compatibility)
-
-
-At the time of writing, the *Device Motion Event* offers better browser compatibility, so let's explore that.
+Many of the Web APIs are experimental and so there are some [browser compatibility](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility) issues to be aware of. At the time of writing, the *Device Motion Event* offers better browser compatibility, so I decided to explore that.
 
 ## Getting the mobile motion data
 
-As it's an event, we can subscribe to it using an event listener. For data privacy reasons, a number of devices (notably Apple devices) require user consent before the sensors and motion events can be accessed. 
+We can subscribe to events using an event listener. However, for data privacy reasons, a number of devices (notably Apple) require user consent before the sensors and motion events can be accessed. 
 
 
-Asking permission
+**Asking permission**
+
+For iOS 13+, we must ask permission and check the permission has been granted before we can add the event listener. This code can be triggered by a button and in turn, brings up a native permission pop-up to allow or deny consent.
+
 ```
 function requestPermission() {
   if (typeof DeviceMotionEvent.requestPermission === 'function') {
@@ -86,11 +84,11 @@ function requestPermission() {
   }
 }
 ```
-Hat tip to [trekhleb.dev](// https://trekhleb.dev/blog/2021/gyro-web/) and [web.dev](https://web.dev/generic-sensor/) for inspiration and reference. 
+Hat tip to [trekhleb.dev](https://trekhleb.dev/blog/2021/gyro-web/) and [web.dev](https://web.dev/generic-sensor/) for reference and inspiration. 
 
 ## Exploring the data
 
-So now we have requested permissions, let's explore the the data returned from the motion event.
+So now we have requested permission, let's explore the the data returned from the motion event.
 
 ```
 function handleMotion(event) {
@@ -98,7 +96,7 @@ function handleMotion(event) {
 }
 ```
 
-The DeviceMotionEvent object looks like this:
+The raw DeviceMotionEvent object looks like this:
 
 ```
 DeviceMotionEvent {
@@ -112,39 +110,54 @@ DeviceMotionEvent {
 ```
 ### Acceleration
 
-[show diagram of axes]
-![something](/web-api-sensors/acceleration-sensor.jpg)
+Acceleration is across three axes: x, y and z, and represents the acceleration in m/s squared.
+![diagram of acceleration axes](/web-api-sensors/acceleration-sensor.jpg)
+
 
 ### Acceleration Including Gravity 
 
-If we subtract the acceleration value, we're left with the orientation 
+This is acceleration including the effects of gravity. I was more interested in establishing device orientation, so I subtracted the *Acceleration* axis from the *Acceleration Including Gravity* axis which left the orientation. The values range from -9.81 to 9.81 with 9.81 m/s squared being the acceleration due to gravity.
 
-[show diagram of axes]
-![something](/web-api-sensors/gravity-sensor.jpg)
+Using the x, y and z values, we can establish whether the device is:
+- Upright
+- Upside down
+- On the right edge
+- On the left edge
+- Face up
+- Face down
+
+And every combination in between.
+
+![diagram of gravity axes](/web-api-sensors/gravity-sensor.jpg)
 
 ### Rotation Rate
 
-[show diagram of axes]
+This is the angular rotation rate across three axes: alpha, beta and gamma, measured in m/s squared.
 
-![something](/web-api-sensors/rotation-rate-sensors.jpg)
+![diagram of rotation rate axes](/web-api-sensors/rotation-rate-sensors.jpg)
 
-Interval - the relative time since the last measurement.
-
+And finally, there's *Interval* - the relative time since the last motion event.
 
 
 ## Charting the data
 
- Now we have device motion data, how can we chart it in real time?
+ Now that I had device motion data, I wanted to chart it in real time.
 
 I came across a great library called [smoothie.js](http://smoothiecharts.org/). It's simple to set up and is easy to configure / customise.
 
-I needed three real time charts with each axis plotted in a different colour 
+![something](/web-api-sensors/smoothie-charts.jpg)
+
+
+I needed three real time charts, with each axis plotted in a different colour for:
 - Rotation rate 
 - Acceleration 
 - Device orientation 
 
 
-Initialising the charts
+**Initialising the charts**
+
+Each chart is initialised with three series, each one mapping to a sensor axis and a coloured line on the chart.
+
 ```
 var rotationRateSeries1 = new TimeSeries();
 var rotationRateSeries2 = new TimeSeries();
@@ -182,7 +195,9 @@ function createTimeline() {
 
 ```
 
-Displaying data
+**Displaying data**
+
+When the motion event is called, we simply append the data to the appropriate timeline series. The smoothie.js library takes care of the managing the stale data once it's gone off the chart.
 
 ```
 function handleMotion(event) {
@@ -205,15 +220,14 @@ function handleMotion(event) {
 }
 
 ```
+Here's the final result running on an iPhone 13, in landscape mode.
 
-You can see the completed project [here](https://github.com/cloudfright/motion-sensor-chart).
-
+![sensor chart](/web-api-sensors/sensor-chart.jpeg)
+You can see the completed project in the [motion-sensor-chart](https://github.com/cloudfright/motion-sensor-chart) repository on GitHub.
 
 ## Next steps
 
-Offline analysis 
-Posting data to Azure storage 
-Machine Learning RNN
+Observing realtime sensor information was really useful and led me to writing a web app to stream the data to cloud-based storage for offline analysis and process using machine learning. I'll talk about that in an upcoming post!
 
 
 
