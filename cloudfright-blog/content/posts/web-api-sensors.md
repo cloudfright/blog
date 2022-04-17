@@ -2,7 +2,7 @@
 title: "Charting mobile motion sensor data with JavaScript"
 date: 2022-04-09T08:01:20+01:00
 draft: false
-summary: "Have you ever wondered if you could read motion data from your phone and visualise it it in real time? If you have, then read on."
+summary: "Have you ever wondered if you could read motion data from your phone and visualise it  in real time? If you have, then read on."
 cover: 
     image: /web-api-sensors/sensor-chart-mini.jpeg
     alt: "moblie motion sensor chart"
