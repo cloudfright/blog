@@ -1,7 +1,7 @@
 ---
 title: "Charting mobile motion sensor data with JavaScript"
 date: 2022-04-09T08:01:20+01:00
-draft: true
+draft: false
 summary: "Have you ever wondered if you could read motion data from your phone and visualise it it in real time? If you have, then read on."
 cover: 
     image: /web-api-sensors/sensor-chart-mini.jpeg
@@ -132,7 +132,7 @@ And every combination in between.
 
 ### Rotation Rate
 
-This is the angular rotation rate across three axes: alpha, beta and gamma, measured in m/s squared.
+This is the angular rotation rate across three axes: alpha, beta and gamma, measured in degrees per second.
 
 ![diagram of rotation rate axes](/web-api-sensors/rotation-rate-sensors.jpg)
 
@@ -223,11 +223,11 @@ function handleMotion(event) {
 Here's the final result running on an iPhone 13, in landscape mode.
 
 ![sensor chart](/web-api-sensors/sensor-chart.jpeg)
-You can see the completed project in the [motion-sensor-chart](https://github.com/cloudfright/motion-sensor-chart) repository on GitHub.
+You can see the app running [here](https://zealous-bay-04fa90403.1.azurestaticapps.net/). Visit this on mobile in landscape mode. Press the request permission button, accept the permission and then you should see sensor data shown on the moving charts. The code for the completed project is in the [motion-sensor-chart](https://github.com/cloudfright/motion-sensor-chart) repository on GitHub.
 
 ## Next steps
 
-Observing realtime sensor information was really useful and led me to writing a web app to stream the data to cloud-based storage for offline analysis and process using machine learning. I'll talk about that in an upcoming post!
+Observing realtime sensor information was really useful and led me to writing a web app to stream the data to cloud-based storage for offline analysis and processing using machine learning. I'll talk all about that in an upcoming post!
 
 
 
