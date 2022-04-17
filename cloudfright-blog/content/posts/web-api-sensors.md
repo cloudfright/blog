@@ -113,16 +113,20 @@ DeviceMotionEvent {
 ### Acceleration
 
 [show diagram of axes]
+![something](/web-api-sensors/acceleration-sensor.jpg)
 
 ### Acceleration Including Gravity 
 
 If we subtract the acceleration value, we're left with the orientation 
 
 [show diagram of axes]
+![something](/web-api-sensors/gravity-sensor.jpg)
 
 ### Rotation Rate
 
 [show diagram of axes]
+
+![something](/web-api-sensors/rotation-rate-sensors.jpg)
 
 Interval - the relative time since the last measurement.
 
