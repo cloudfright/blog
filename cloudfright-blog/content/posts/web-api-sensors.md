@@ -36,6 +36,8 @@ For accessing a mobile device's sensors, we have two options:
 - [Sensor APIs](https://developer.mozilla.org/en-US/docs/Web/API/)Sensor_APIs
 - [Device Motion Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
 
+- [W3C spec](https://w3c.github.io/deviceorientation/#devicemotion)
+
 The Sensor APIs offer access to: 
 - AbsoluteOrientationSensor	
 - Accelerometer	
@@ -84,7 +86,7 @@ function requestPermission() {
   }
 }
 ```
-Hat tip to [trekhleb.dev](// https://trekhleb.dev/blog/2021/gyro-web/) for inspiration and reference. 
+Hat tip to [trekhleb.dev](// https://trekhleb.dev/blog/2021/gyro-web/) and [web.dev](https://web.dev/generic-sensor/) for inspiration and reference. 
 
 ## Exploring the data
 
@@ -208,6 +210,11 @@ You can see the completed project [here](https://github.com/cloudfright/motion-s
 Offline analysis 
 Posting data to Azure storage 
 Machine Learning RNN
+
+
+
+
+
 
 
 
