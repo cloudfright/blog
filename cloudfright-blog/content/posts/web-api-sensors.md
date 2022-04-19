@@ -223,7 +223,9 @@ function handleMotion(event) {
 Here's the final result running on an iPhone 13, in landscape mode.
 
 ![sensor chart](/web-api-sensors/sensor-chart.jpeg)
-You can see the app running [here](https://zealous-bay-04fa90403.1.azurestaticapps.net/). Visit this on mobile in landscape mode. Press the request permission button, accept the permission and then you should see sensor data shown on the moving charts. The code for the completed project is in the [motion-sensor-chart](https://github.com/cloudfright/motion-sensor-chart) repository on GitHub.
+You can see the app running [here](https://zealous-bay-04fa90403.1.azurestaticapps.net/). Visit this on mobile in landscape mode.  Press the request permission button, accept the permission and you should see sensor data shown on the moving charts. I tested on an iPhone 13 using Safari (15.4.1) and Chrome (100.0.4896.77). At the time of writing, this app doesn't work in the Brave mobile browser.
+
+The code for the completed project is in the [motion-sensor-chart](https://github.com/cloudfright/motion-sensor-chart) repository on GitHub.
 
 ## Next steps
 
