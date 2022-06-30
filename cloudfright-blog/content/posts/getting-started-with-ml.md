@@ -2,7 +2,7 @@
 title: "Getting started with machine learning"
 date: 2022-05-03T20:41:03+01:00
 draft: false
-summary: "Have you wanted to understand machine learning, but didn't know where to begin? Whether you're a software developer wanting to broaden your skill set, or just curious about machine learning, this post is for you."
+summary: "Want to understand machine learning, but don't know where to begin? Whether you're a software developer wanting to broaden your skill set, or just curious about machine learning, this post is for you."
 cover: 
     image: /getting-started-with-ml/ml-synapse.jpg
     alt: "diagrams showing common machine learning uses"
