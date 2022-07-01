@@ -43,6 +43,7 @@ So why aren't we aware of our biases? Why can't we identify them and simply adju
 Enter Behavioural Science. Behavioral science describes the study of human behavior through the use of systematic experimentation and observation. This is an extensive field of learning that has expanded our knowledge of human behaviour and identified [hundreds](https://en.wikipedia.org/wiki/List_of_cognitive_biases
 ) of biases.
 
+adfdf
 
 - what are the big discoveries in BS?
 - Daniel Khademan - Thinking Fast and Slow
