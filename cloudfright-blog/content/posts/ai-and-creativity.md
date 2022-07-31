@@ -1,11 +1,11 @@
 ---
-title: "Will AI minimise human Creativity?"
+title: "Will AI dampen human creativity?"
 date: 2022-07-17T09:06:50+01:00
 draft: true
-summary: The rise of AI art driven from text prompts such as DALLE-2, Midjourney and others, is reducing the creative barriers needed to create high-quality art. What does this mean for the future of human creativity?"
+summary: The rise of AI art driven from text prompts such as DALLE-2, Midjourney and others, is reducing the creative barriers needed to create high-quality art. What does this mean for human creativity?"
 cover: 
-    image: 
-    alt: ""
+    image: /ai-creativity/ai-creativity.jpg
+    alt: "AI generated art"
 
 categories: ["AI"]
 tags: ["AI", "art", "machine learning"]
@@ -19,17 +19,17 @@ params:
 
 ## What is AI art?
 
-Generative AI can take human prompts and generate an output. This typically takes the form of a text input which is then used to generate an image based on the context of the text input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, "A horse standing in a field by a barn in the style of Turner". Parts of an image can also seamlessly replaced with another image using a process called 'in-painting'.
+Generative AI can take human prompts and produce an output. This typically takes the form of a text input which is then used to generate an image based on the context derived from the text input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, "A horse standing in a field by a barn in the style of Turner". Parts of an image can also seamlessly replaced with another image using a process called 'in-painting'.
 
 Some of the most talked about AI artist tools are:
 
-[DALLE-2](https://openai.com/dall-e-2/) from Open AI
+**[DALLE-2](https://openai.com/dall-e-2/)** from Open AI
 
-[Midjourney](https://www.midjourney.com/) from Midjourney
+**[Midjourney](https://www.midjourney.com/)** from Midjourney
 
-[Imagen](https://imagen.research.google/) from Google
+**[Imagen](https://imagen.research.google/)** from Google
 
-[Disco diffusion](https://www.discodiffusion.com) Open Source
+**[Disco diffusion](https://www.discodiffusion.com)** Open Source
 
 inpainting - 
 
@@ -54,91 +54,52 @@ Trained on labelled images
 
 - generative process called Diffusion 
 
-## We've been here before
+## History repeats
 
-The Camera Obscrura was used by artists in the 16th century as painting aid. A small hole let light into a dark room, revealing an upside-down that could be used as a reference to capture the perspective. Even portable units were developed. Many artists saw this as cheating, but in reality artists were adapting to newly available tools and techniques. As the camera obsuca became more portable, and with the advances with printing images, the portable camera was born, with the first photograph printed in 1825.
+The Camera Obscrura was used by artists in the 16th century as a painting aid. A small hole let light into a dark room, revealing an upside-down image that could be used as a reference, and even traced. Many artists saw this as cheating, but in reality artists were adapting to newly available tools and techniques. As the camera obsuca became more portable, and with the advances in photographic printing resulting in the first printed photograph in 1825, a new art form was born.
 
-The hot questions at the time were "Are portrait painters going to be put out of business?", and "Is taking taking a photograph really creative?" After all, taking a picture involved little effort, was almost instantaneous and was just capturing the image in front of it. As it turned out, there was a lot of room for creativity for photographers when composing the image, use of different lenses, filters and hand-crafting the prints to introduce effects not present in the original image. The mass production of cameras in the 50s democratised creativity for many people. This is a common theme, we'll come back to.
+![camera obscura](/ai-creativity/camera-obscura.jpg)
 
-In the world of music has gone a similar journey. From purely acoustic instruments, to electric instruments that could be amplified, to ever more portable studio-quality production software. Now 
+The hot questions at the time were "Are portrait painters going to be put out of business?", and "Is taking taking a photograph really creative?" After all, taking a picture involved little effort, was almost instantaneous, and was just capturing the image in front of the camera. As it turned out, there was a considerable amount of creativity shown by photographers when composing the image, choosing different lenses, filters and hand-crafting the prints to introduce effects not present in the original image. The mass production of cameras in the 50s democratised creativity for many people. This is a common theme, which we'll keep revisiting.
 
+![digital audio workstation software on a laptop](/ai-creativity/daw.jpg)
 
+The world of musical instruments has taken a similar path. From purely acoustic instruments, to electric instruments that could be amplified, to simulations of instruments, sampled instruments and ever more portable studio-quality production software. Now musicians can record, mix and produce music on a laptop without having to own, or even be able to play the instruments well. Is this cheating, or again, is this democratisation of a new art form? Experienced and skilled musicians still stand out from amateurs, but now the barrier to entry has been set lower. 
 
+As we look towards the advances in AI-generated art, we see a similar pattern. It's now possible to create high-quality, original art with just a sentence describing what you want to see and the style you'd like it in.
 
-- Cameras putting portrat artists out of business - photography changed the work of portrait artists 
-- Even with photography, the professionals still stand out from the amatuers, that's a combination of more experience and often better equipment, but now the playing field is levelled to an extent (unless arties increasinly use more powerful computers)
-
-Artists need to undestand that technology and try to adapt  -
-
-- Synths, drum machines, sequencers - produce a hit album in your bedroom with little experience - this has allowed more people to do it and the market to flourish and many people to express themselves - although it's fair to say, not many people are making a living out of it - NEEDS CITATION  
+What does this mean for artists who make a living from their creations and will this new tool devalue their art?
 
 ## How are artists reacting to AI Art?
 
-Artists appear to have two distinct reactions, either "Do I still have a livelihood?", or "How can use this new art form to my advantage".
-Artists spend years training, practising to hone their style and if anyone who can form a sentence can create high-quality art in a myriad of styles, what uniqueness is there left for artists to express their individuality? Some artists  engaged with AI art are exploring **prompt craft** - how to creatively craft the text prompt to generate art that is unique to the creator of the prompt.
+Artists appear to have two distinct reactions; *Do I still have a livelihood?*, or *How can I use this new art form to my advantage?* Particularly concerning to some artists is the ability for AI art tools to copy an artist's style. Artists spend years training to hone their style, and if anyone who can form a sentence can create high-quality art in a myriad of styles, what uniqueness is there left for artists to express their individuality? 
 
-Artist James Gurney believes the consumes of AI-generated art should be able to see the text prompt and artists should be able to opt out of their artwork used in the training set.
+But for the artists are embracing the new technology, they are exploring the idea the idea of **prompt craft** - how to creatively craft the text prompt to generate art that is unique to the creator of the prompt. However, artist James Gurney believes that consumers of AI-generated art should be able to see the text prompt used to generate the artwork and professional artists should be able to opt out of their artwork used in the training set.
 
+[Open AI](https://openai.com/), whose [mission](https://openai.com/about/) is bring beneficial AI to the world, promotes DALLE-2 system as: 
 
+>*DALLE-2 is an example of how imaginative humans and clever systems can work together to make new things, amplifying our creative potential."*
 
-Zipf's law - most people use simple words - "prompt craft"
-
-
-"DALLE-2 is an example of how iumaginative humans and clever systems can work together to make new things, amplifying our creative potential"
-
-
-"prompt engineering" - use long list of words , get unpredictable things back
+Many of the AI art tools are rolling out invitation-only beta access and the public appetite is insatiable. The [dalle2](https://www.reddit.com/r/dalle2/) subredit has some highly creative examples of generated images and spectacular animated images that have been stitched  together, like [this example](
+https://www.reddit.com/r/dalle2/comments/wcbu5l/i_just_got_access_today_and_i_used_all_my_credits) from Reddit user [JackTheTak](https://www.reddit.com/user/JackTheYak_/)
 
 
-james  Gurney beleives that viewers of the art should be able to see the prompt that generated the picture and also artists should be allowed to opt out of having their artwork used in the training set
+What about copyright? Who is the creator and who is the owner of the copyright of AI-generated art? Should artists be credited and compensated when AI art is generated based on their style? 
+Questions like these remained answered as the AI tools gain popularity and continue to evolve.
 
+A recent [UK government consultation](https://www.gov.uk/government/consultations/artificial-intelligence-and-ip-copyright-and-patents/outcome/artificial-intelligence-and-intellectual-property-copyright-and-patents-government-response-to-consultation) on AI and copyright concluded that the status quo should be observed for now.
 
-Some artists are upset around the copyright problems 
+There will be an immediate impact on certain industries. The stock photography business for will change forever. The current mainstream AI tools make it easy to generate photorealistic images for use in documents and videos. The revenue previously generated by the big stock photo agencies will be distributed among the AI tools that will increasingly offer subscription services. Although it's also likely that the largest stock photo agencies will begin to offer an AI-generation service for their customers who are loyal to their brand. 
 
-- Mario Klingermann - "you have to know the right words for the spell"
-If 10,000 people have access to the same model, will I still be able to make something that people will want to buy, or would they prefer to make it themselves in my style?
-Some artists took decades to perfect their style and now all it takes is to for someone to put their name into a prompt to product a realistic - good artists copy and great artists steal
-When everyone is in the same space, what can you claim is yours?
+## What's next for AI generation tools?
 
-Rob sheridan - art director and designer - "If anyone can do this, what's the currency now, what value can an artist bring to the table"? In the future, everyone is an art director 
-You conceived what it is, and that's a skill in itself - this could make our lives more valueable 
-Everything in art is inspired by something else - everything's a remix
+AI generative tools are already encroaching into other areas. Open AI introduced GPT-3, a language generator in mid 2020, where from a text prompt, GPT-3 can generate human-like text output. The UK newspaper, The Guardian, used GTP-3 to write [an essay](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3) to convince the reader that robots some in peace. In the world of coding., the partnership between Open AI and Microsoft produced [GitHub Co-Pilot](https://github.com/features/copilot/), described as *Your AI programmer* and is based on Open AI's [Codex](https://openai.com/blog/openai-codex/) project.
 
+AI art will continue evolve at pace. And in its sights will be moving images, and even entire movies with the images and text all generated by AI. Education could be transformed using AI-generated content, bringing history and science to life with the help of Extended Reality (XR) peripherals. Personalised learning could become could be a great example of beneficial AI. 
 
-Ryan Murdock - it will change our priorities and change what's special to us
-Art is in the prompt as well as the image
+ Will humans lose the creative ground to machines in the digital domain? It's likely it will go the same way as the camera. AI generation will become a tool that makes it easier for anyone to be creative without needing the training, skill, or knowledge. New art forms will appear and artists will adapt by embracing the technology to combine with other art forms, or work exclusively in an area currently out of reach of AI, for example, physical art, and performance art. Will there ever areas of creativity that will be out of reach of machine? No. The machines are coming.
 
+> I asked DALLE-2 for **A robot painting a picture of a dolphin in the style of andy warhol in an artist's studio lit by natural light**
 
-When we look at a piece of art will we care  or even know if it's AI-generated or not
+![dalle-2 output A robot painting a picture of a dolphin in the style of Andy Warhol in an artist's studio lit by natural light](/ai-creativity/DALLE.jpg)
 
-Bokar N'Diaye - the AI doesn't create, it assembles, combines - which we've all be doing throughout human history 
-
-Hannah Johnston - with photography is the photographer really the artist or is the camera just a tool
-
-## What's next the target for AI tools?
-
-- Can use tools like this to actively explore art hisotory - Ted underwood (professor univeristy of illinois)
-
-- Music - reason chord maker 
-
-= Writing 
-
-
-
-Reference 
-
-https://blog.adafruit.com/2022/06/12/vox-explains-dall-e-2-midjourney-and-imagen/
-https://www.youtube.com/watch?v=sFBfrZ-N3G4 <-- -extended discussion on implications 
-
-
-
-
-Conversation points.. 
-- Innovation comes at a price
-- Stock images (what other industries could be affected?)
-- If everyone can create art, what does this mean? 
-- Talk about examples in the past of creative music tools that present threats and how it turned out e.g. synths, autotune, sequences, quanitising etc.
-- Writing and music might head in that direction
-- Will the public prefer end up preferring AI-generated art/music/writing?
-- What's left for humans - the physical world of creativity e.g. live performance?
-- Will AI only dominate the digital world?
