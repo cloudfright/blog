@@ -19,7 +19,7 @@ params:
 
 ## What is AI art?
 
-Generative AI can take human prompts and produce an output. This typically takes the form of a text input which is then used to generate an image based on the context derived from the text input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, "A horse standing in a field by a barn in the style of Turner". Parts of an image can also seamlessly replaced with another image using a process called 'in-painting'.
+Generative AI can take human prompts and produce an output. This typically takes the form of a text input which is then used to generate an image based on the context derived from the text input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, "A horse standing in a field by a barn in the style of Turner". Parts of an image can also seamlessly replaced with another image using a process called *in-painting*.
 
 Some of the most talked about AI artist tools are:
 
@@ -31,28 +31,17 @@ Some of the most talked about AI artist tools are:
 
 **[Disco diffusion](https://www.discodiffusion.com)** Open Source
 
-inpainting - 
 
-## How does it work?
+For the rest of this article, we'll focus on DALLE-2, mainly because that's the one getting the most attention right now.
 
+## How does DALLE-2 work?
 
+The *Explain it like I'm 5* (ELI5) version would go something like this:
 
-Interpret text, supervised model trained on images and styles, Associate the text 
-
-
-
-
-Trained on labelled images
-- understands objects and the relationships between objects - give example
-- sometimes pulled from the internet and the alt text is used as a label
-
-- Output image does not come from the training data
-- - Deep learning model
-- Feature extraction - build mathematical space - more than 500 dimensions  - clustering
-- Randomness in the generation ensures the output will be unique each team
+DALLE-2 takes a some text you type in, called a *prompt*, works out what it means and then uses some clever processes working closely together, to produce a picture. When DALLE-2 was built, it was shown millions of pictures with captions describing what was in the pictures. DALLE-2 takes the prompt, works out what it means, then looks at all the pictures it knows about and tries to predict how closely the text descriptions of the pictures are similar to the prompt. Once DALLE-2 understands which of its pictures relate which parts of the prompt, it can generate a brand new picture, not by copying parts of the pictures in knows about, but using a clever way of generating a picture from a jumbled mess of random pixels using its understanding of the prompt and its example pictures to guide it.
 
 
-- generative process called Diffusion 
+For a more thorough and technical overview of how it works, there are some excellent articles [here](https://towardsdatascience.com/dall-e-2-explained-the-promise-and-limitations-of-a-revolutionary-ai-3faf691be220),  [here](https://medium.com/mlearning-ai/how-does-dall-e-2-work-b6a7f912fc5f) and [here](https://medium.com/augmented-startups/how-does-dall-e-2-work-e6d492a2667f).
 
 ## History repeats
 
@@ -75,6 +64,8 @@ What does this mean for artists who make a living from their creations and will 
 Artists appear to have two distinct reactions; *Do I still have a livelihood?*, or *How can I use this new art form to my advantage?* Particularly concerning to some artists is the ability for AI art tools to copy an artist's style. Artists spend years training to hone their style, and if anyone who can form a sentence can create high-quality art in a myriad of styles, what uniqueness is there left for artists to express their individuality? 
 
 But for the artists are embracing the new technology, they are exploring the idea the idea of **prompt craft** - how to creatively craft the text prompt to generate art that is unique to the creator of the prompt. However, artist James Gurney believes that consumers of AI-generated art should be able to see the text prompt used to generate the artwork and professional artists should be able to opt out of their artwork used in the training set.
+
+![open ai logo](/ai-creativity/open-ai.jpg)
 
 [Open AI](https://openai.com/), whose [mission](https://openai.com/about/) is bring beneficial AI to the world, promotes DALLE-2 system as: 
 
@@ -99,7 +90,7 @@ AI art will continue evolve at pace. And in its sights will be moving images, an
 
  Will humans lose the creative ground to machines in the digital domain? It's likely it will go the same way as the camera. AI generation will become a tool that makes it easier for anyone to be creative without needing the training, skill, or knowledge. New art forms will appear and artists will adapt by embracing the technology to combine with other art forms, or work exclusively in an area currently out of reach of AI, for example, physical art, and performance art. Will there ever areas of creativity that will be out of reach of machine? No. The machines are coming.
 
-> I asked DALLE-2 for **A robot painting a picture of a dolphin in the style of andy warhol in an artist's studio lit by natural light**
+> I asked DALLE-2 for **A robot painting a picture of a dolphin in the style of andy warhol in an artist's studio lit by natural light** and here's what it gave me.
 
 ![dalle-2 output A robot painting a picture of a dolphin in the style of Andy Warhol in an artist's studio lit by natural light](/ai-creativity/DALLE.jpg)
 
