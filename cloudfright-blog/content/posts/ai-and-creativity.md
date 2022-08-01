@@ -1,7 +1,7 @@
 ---
 title: "Will AI dampen human creativity?"
 date: 2022-07-17T09:06:50+01:00
-draft: true
+draft: false
 summary: The rise of text-driven AI art such as DALLE-2, Midjourney and others, is reducing the creative barriers needed to create high-quality art. What does this mean for human creativity?"
 cover: 
     image: /ai-creativity/ai-creativity.jpg
