@@ -19,7 +19,7 @@ params:
 
 ## What is AI art?
 
-Generative AI can take human prompts and produce an output. This typically takes the form of text input that generates an image based on the context of the input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, *A horse standing in a field by a barn in the style of Turner*. Parts of an image can also seamlessly replaced with another image using a process called *in-painting*.
+Generative AI can take human prompts and produce an output. This typically takes the form of text input that generates an image based on the context of the input. And the generated images are often astonishing. Not only that, but these AI tools can generate variations of images based on the style of a supplied image. It can even copy an artist's style, without copying any of their artwork, just by putting the artist's name in the prompt, for example, *A horse standing in a field by a barn in the style of Turner*. Parts of an image can also seamlessly be replaced with another image using a process called *in-painting*.
 
 Some of the most talked about AI artist tools are:
 
@@ -42,19 +42,19 @@ For the rest of this post, we'll focus on DALLE-2, mainly because that's the one
 
 The *Explain it like I'm 5* (ELI5) version would go something like this:
 
-DALLE-2 takes a some text you type in, called a *prompt*, works out what it means and then uses some clever maths to produce a picture. When DALLE-2 was built, it was shown millions of pictures with words describing what was in the pictures. Once DALLE-2 knows what the prompt means, it looks at all the pictures it knows about and tries to predict how closely the text descriptions of the pictures are similar to the prompt. And once it understands which parts of the pictures it knows about relate which parts of the prompt, it can generate a brand new picture, not by copying parts of the pictures it already knows about, but using a interesting way of generating a picture from a jumbled mess of random pixels guided by its understanding of the prompt and pictures it knows about.
+DALLE-2 takes some text you type in, called a *prompt*, works out what it means and then uses some clever maths to produce a picture. When DALLE-2 was built, it was shown millions of pictures with words describing what was in the pictures. Once DALLE-2 knows what the prompt means, it looks at all the pictures it knows about and tries to predict how closely the text descriptions of the pictures are like the prompt. And once it understands which parts of the pictures it knows about relate which parts of the prompt, it can generate a brand-new picture, not by copying parts of the pictures it already knows about, but using an interesting way of generating a picture from a jumbled mess of random pixels guided by its understanding of the prompt and pictures it knows about.
 
 For a more thorough, technical overview of how it works, there are some excellent articles [here](https://towardsdatascience.com/dall-e-2-explained-the-promise-and-limitations-of-a-revolutionary-ai-3faf691be220),  [here](https://medium.com/mlearning-ai/how-does-dall-e-2-work-b6a7f912fc5f) and [here](https://medium.com/augmented-startups/how-does-dall-e-2-work-e6d492a2667f).
 
 
 
-What does this mean for artists who make a living from their creations and will this new tool devalue their art?
+What does this mean for artists who make a living from their creations, and will this new tool devalue their art?
 
 ## How are artists reacting to AI Art?
 
-Artists appear to have two distinct reactions; *Do I still have a livelihood?*, or *How can I use this new art form to my advantage?* Particularly concerning to some artists is the ability for AI art tools to copy an artist's style. Artists spend years training to hone their style, and if anyone who can form a sentence is able to create high-quality art in a myriad of styles, how can artists retain their  unique style and express their individuality? 
+Artists appear to have two distinct reactions; *Do I still have a livelihood?*, or *How can I use this new art form to my advantage?* Particularly concerning to some artists is the ability for AI art tools to copy an artist's style. Artists spend years training to hone their style, and if anyone who can form a sentence is able to create high-quality art in a myriad of styles, how can artists retain their unique style and express their individuality? 
 
-For the the artists embracing the new technology, they're exploring the idea the idea of **prompt craft** - creatively crafting the text prompt to generate art that is unique to the creator of the prompt. Artist James Gurney believes that consumers of AI-generated art should be able to see the text prompt used to generate the artwork and professional artists should be able to opt out of their artwork used in the training set. 
+For the artists embracing the new technology, they're exploring the idea the idea of **prompt craft** - creatively crafting the text prompt to generate art that is unique to the creator of the prompt. Artist James Gurney believes that consumers of AI-generated art should be able to see the text prompt used to generate the artwork and professional artists should be able to opt out of their artwork used in the training set. 
 
 [Open AI](https://openai.com/), whose [mission](https://openai.com/about/) is bring beneficial AI to the world, promotes DALLE-2 system as: 
 
@@ -70,7 +70,7 @@ There will be an immediate impact on certain industries. The stock photography a
 
 ## History repeats
 
-The Camera Obscrura was used by artists in the 16th century as a painting aid. A small hole let light into a dark room, revealing an upside-down image that could be used as a reference, and even traced. Many artists saw this as cheating, but in reality artists were adapting to newly available tools and techniques. As the camera obsuca became more portable, and with the advances in photographic printing resulting in the first printed photograph in 1825, the new art form of photography was born.
+The Camera Obscrura was used by artists in the 16th century as a painting aid. A small hole let light into a dark room, revealing an upside-down image that could be used as a reference, and even traced. Many artists saw this as cheating, but in reality, artists were adapting to newly available tools and techniques. As the camera obscura became more portable, and with the advances in photographic printing resulting in the first printed photograph in 1825, the new art form of photography was born.
 
 ![camera obscura](/ai-creativity/camera-obscura.jpg)
 
@@ -78,7 +78,7 @@ The hot questions at the time were *Are portrait painters going to be put out of
 
 ![digital audio workstation software on a laptop](/ai-creativity/daw.jpg)
 
-The world of musical instruments has taken a similar path. From purely acoustic instruments, to electric instruments that could be amplified, to simulations of instruments, sampled instruments and ever more portable studio-quality production software. Now musicians can record, mix and produce music on a laptop without having to own, or even be able to play the instruments well. Is this cheating, or again, is this democratisation of a new art form? Experienced and skilled musicians still stand out from amateurs, but the barrier to entry was lowered. 
+The world of musical instruments has taken a similar path. From purely acoustic instruments to electric instruments that could be amplified, to simulations of instruments, sampled instruments and ever more portable studio-quality production software. Now musicians can record, mix and produce music on a laptop without having to own, or even be able to play the instruments well. Is this cheating, or again, is this democratisation of a new art form? Experienced and skilled musicians still stand out from amateurs, but the barrier to entry was lowered. 
 
 As we look towards the advances in AI-generated art, we see a similar pattern. As we've seen, it's now possible to create high-quality, original art with just a sentence describing what you want to see and the style you'd like it in.
 
@@ -86,7 +86,7 @@ As we look towards the advances in AI-generated art, we see a similar pattern. A
 
 AI generative tools are already encroaching into other areas. In 2020, Open AI introduced GPT-3, a language generator which can generate human-like text output from a text prompt. In UK, The Guardian newspaper used GTP-3 to write [an essay](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3) to convince the reader that robots some in peace. In the world of coding, the partnership between The partnership between Open AI and Microsoft produced [GitHub Co-Pilot](https://github.com/features/copilot/), based on Open AI's [Codex](https://openai.com/blog/openai-codex/) project and described as *Your AI programmer*. GitHub Co-Pilot can extract information from a text prompt and can write small sections of code in various coding languages. Is this cheating or just a tool? It has certainly [divided](https://www.youtube.com/watch?v=b9u3ZAGQmT0) programmers.
 
-AI art will continue evolve at pace. And in its sights are moving images and entire movies built with with AI-generated content. Education could be transformed using AI-generated content, bringing history and science to life with the help of Extended Reality (XR) peripherals. Personalised learning could become the poster child for beneficial AI. 
+AI art will continue evolve at pace. And in its sights are moving images and entire movies built with AI-generated content. Education could be transformed using AI-generated content, bringing history and science to life with the help of Extended Reality (XR) peripherals. Personalised learning could become the poster child for beneficial AI. 
 
- Will humans lose creative ground to machines in the digital domain? It's likely it will be similar to  birth of the camera. AI generation will become a tool that makes it easier for anyone to be creative without needing the training, skill, or knowledge. New art forms will appear and artists will adapt by embracing the technology to combine with other art forms, or work exclusively in areas untouched by AI, such as physical art, or performance art. Will there ever creative pursuits that will be out of reach of machine? No. The machines are coming.
+ Will humans lose creative ground to machines in the digital domain? It's likely it will be similar to the birth of the camera. AI generation will become a tool that makes it easier for anyone to be creative without needing the training, skill, or knowledge. New art forms will appear, and artists will adapt by embracing the technology to combine with other art forms, or work exclusively in areas untouched by AI, such as physical art, or performance art. Will there ever creative pursuits that will be out of reach of machine? No. The machines are coming.
 
