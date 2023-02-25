@@ -114,7 +114,7 @@ For developers
 
 - The [Coding Train playlist on ml5.js]() is great way to experiment with machine learning in a web browser without having to set up complex development environments
 
-- Jason Brownlee, the mind behind [Machine Learning Mastery](https://machinelaarningmastery.com), has an excellent series of learning paths and books to accelerate your learning, to take you from beginner to practitioner  
+- Jason Brownlee, the mind behind [Machine Learning Mastery](https://machinelearningmastery.com), has an excellent series of learning paths and books to accelerate your learning, to take you from beginner to practitioner  
 
 ## For curious minds ## 
 
